@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-weight: bold;
+        font-family:sans-serif;
+      }
+
+      #container{
+        padding: 10px;
+      }
+
+      #content-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+      }
+
+      button{
+        border: 0.5px solid #94B49F;
+        outline: none;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #94B49F;
+        color: #FCF8E8;
+        margin: 10px 0;
+      }
+
+      #input-wrapper{
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      input{
+        border: 0.5px solid #94B49F;
+        outline: none;
+        padding: 5px;
+        background-color: #94B49F;
+        font-weight: bold;
+        color: #FCF8E8;
+      }
+      img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        display: none;
+        margin: 10px 0;
+      }
+      #loading-wrapper{
+        text-align: center;
+        display: none;
+        color: #94B49F;
+      }
+      #info-text{
+        color: #94B49F;
+        font-weight: bold;
+        display: none;
+      }
+      label{
+        color: #94B49F;
+        font-weight: bold;
+        margin: 10px 0;
+        display: block;
+      }
+
+      ::placeholder {
+        color: #FCF8E8;
+      }
+
+      :-ms-input-placeholder { 
+        color: #FCF8E8;
+      }
+
+      ::-ms-input-placeholder {
+        color: #FCF8E8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="content-wrapper">
+        <div id="info-text">Image source copied to clipboard. </div>
+        <img src="https://i.picsum.photos/id/796/551/431.jpg?hmac=LaqJTec80KvytFuwdfUAw8WDYJxFUX2Lzu2z8Ezx8Q8" id="result">
+          
+        <div id="input-wrapper">
+          <label for="width">Width</label>
+          <input type="number" placeholder="width" id="width" value="100">
+          <label for="height">Height</label>
+          <input type="number" placeholder="height" id="height" value="100">
+        </div>
+        <button id="changeColor">get random image</button>
+      </div>
+
+      <div id="loading-wrapper">
+        Loading...
+      </div>
+    </div>
+    <script src="popup.js"></script>
+
+  </body>
+</html>
